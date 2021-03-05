@@ -1,0 +1,12 @@
+{
+  "name": "hotel-admin-panel",
+  "version": "1.0.0",
+  "description": "Admin panel for Hotel management",
+  "author": {
+    "name": "Aleksandr Kazanin",
+    "facebook": "https://www.facebook.com/aleksandr.kazanin.146",
+    "github": "https://github.com/Tihi777"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
