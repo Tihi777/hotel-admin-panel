@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   CButton,
   CCard,
@@ -7,27 +7,27 @@ import {
   CTooltip,
   CRow,
   CCol,
-  CLink
-} from '@coreui/react'
-import { DocsLink } from 'src/reusable'
+  CLink,
+} from '@coreui/react';
+import { DocsLink } from 'src/reusable';
 
 const Tooltips = () => {
   const placements = [
     'top-start', 'top', 'top-end',
     'bottom-start', 'bottom', 'bottom-end',
     'right-start', 'right', 'right-end',
-    'left-start', 'left', 'left-end'
-  ]
+    'left-start', 'left', 'left-end',
+  ];
 
   return (
     <>
       <CCard>
         <CCardHeader>
           Tooltips
-          <DocsLink name="CTooltip"/>
+          <DocsLink name="CTooltip" />
         </CCardHeader>
         <CCardBody>
-          {/*eslint-disable-next-line*/}
+          {/* eslint-disable-next-line */}
 
           <p className="text-muted">
             Hover over the links below to see tooltips:
@@ -38,7 +38,7 @@ const Tooltips = () => {
             <CTooltip content="Tooltip text">
               <CLink> you probably </CLink>
             </CTooltip>
-              haven't heard of them.
+            haven't heard of them.
             Photo booth beard raw denim letterpress vegan messenger
             bag stumptown. Farm-to-table seitan, mcsweeney's fixie
             sustainable quinoa 8-bit american apparel
@@ -62,7 +62,7 @@ const Tooltips = () => {
         </CCardBody>
       </CCard>
 
-      <hr/>
+      <hr />
 
       <CCard>
         <CCardHeader>
@@ -72,8 +72,8 @@ const Tooltips = () => {
         <CCardBody>
           <div className="my-3">
             <CRow>
-              {placements.map(placement => {
-                return (<CCol
+              {placements.map((placement) => (
+                <CCol
                   md="4"
                   className="py-4 text-center"
                   key={placement}
@@ -86,14 +86,14 @@ const Tooltips = () => {
                       { placement }
                     </CButton>
                   </CTooltip>
-                </CCol>)
-              })}
+                </CCol>
+              ))}
             </CRow>
           </div>
         </CCardBody>
       </CCard>
     </>
-  )
-}
+  );
+};
 
 export default Tooltips;

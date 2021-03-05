@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   CButton,
   CCard,
@@ -7,27 +7,27 @@ import {
   CPopover,
   CRow,
   CCol,
-  CLink
-} from '@coreui/react'
-import { DocsLink } from 'src/reusable'
+  CLink,
+} from '@coreui/react';
+import { DocsLink } from 'src/reusable';
 
 const Popovers = () => {
   const placements = [
     'top-start', 'top', 'top-end',
     'bottom-start', 'bottom', 'bottom-end',
     'right-start', 'right', 'right-end',
-    'left-start', 'left', 'left-end'
-  ]
+    'left-start', 'left', 'left-end',
+  ];
 
   return (
     <>
       <CCard>
         <CCardHeader>
           Popovers
-          <DocsLink name="CPopover"/>
+          <DocsLink name="CPopover" />
         </CCardHeader>
         <CCardBody>
-          {/*eslint-disable-next-line*/}
+          {/* eslint-disable-next-line */}
 
           <p className="text-muted">
             Hover over the links below to see popover:
@@ -38,7 +38,7 @@ const Popovers = () => {
             <CPopover header="Popover header" content="Popover text">
               <CLink> you probably </CLink>
             </CPopover>
-              haven't heard of them.
+            haven't heard of them.
             Photo booth beard raw denim letterpress vegan messenger
             bag stumptown. Farm-to-table seitan, mcsweeney's fixie
             sustainable quinoa 8-bit american apparel
@@ -62,7 +62,7 @@ const Popovers = () => {
         </CCardBody>
       </CCard>
 
-      <hr/>
+      <hr />
 
       <CCard>
         <CCardHeader>
@@ -72,30 +72,31 @@ const Popovers = () => {
         <CCardBody>
           <div className="my-3">
             <CRow>
-              {placements.map(placement => {
-                return (<CCol
+              {placements.map((placement) => (
+                <CCol
                   md="4"
                   className="py-4 text-center"
                   key={placement}
                 >
-                  <CPopover header="Popover header"
+                  <CPopover
+                    header="Popover header"
                     content={`Popover with placement: ${placement}`}
                     placement={placement}
-                    interactive={true}
+                    interactive
                     trigger="click"
                   >
                     <CButton color="primary">
                       { placement }
                     </CButton>
                   </CPopover>
-                </CCol>)
-              })}
+                </CCol>
+              ))}
             </CRow>
           </div>
         </CCardBody>
       </CCard>
     </>
-  )
-}
+  );
+};
 
-export default Popovers
+export default Popovers;

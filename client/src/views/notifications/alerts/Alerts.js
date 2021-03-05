@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   CAlert,
   CButton,
@@ -8,12 +8,12 @@ import {
   CCol,
   CLink,
   CProgress,
-  CRow
-} from '@coreui/react'
-import { DocsLink } from 'src/reusable'
+  CRow,
+} from '@coreui/react';
+import { DocsLink } from 'src/reusable';
 
 const Alerts = () => {
-  const [visible, setVisible] = React.useState(10)
+  const [visible, setVisible] = React.useState(10);
 
   return (
     <>
@@ -22,7 +22,7 @@ const Alerts = () => {
           <CCard>
             <CCardHeader>
               Alerts
-              <DocsLink name="CAlert"/>
+              <DocsLink name="CAlert" />
             </CCardHeader>
             <CCardBody>
               <CAlert color="primary">
@@ -60,49 +60,49 @@ const Alerts = () => {
             </CCardHeader>
             <CCardBody>
               <CAlert color="primary">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a primary alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="secondary">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a secondary alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="success">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a success alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="danger">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a danger alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="warning">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a warning alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="info">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a info alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="light">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a light alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
               </CAlert>
               <CAlert color="dark">
-                {/*eslint-disable-next-line*/}
+                {/* eslint-disable-next-line */}
                 This is a dark alert with&nbsp;
                 <CLink className="alert-link">an example link</CLink>.
                 Give it a click if you like.
@@ -171,7 +171,7 @@ const Alerts = () => {
         </CCol>
       </CRow>
     </>
-  )
-}
+  );
+};
 
-export default Alerts
+export default Alerts;
