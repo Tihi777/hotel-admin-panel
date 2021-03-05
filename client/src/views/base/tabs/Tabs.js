@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
   CCol,
   CNav,
@@ -10,14 +10,14 @@ import {
   CCard,
   CCardBody,
   CTabs,
-  CCardHeader
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { DocsLink } from 'src/reusable'
+  CCardHeader,
+} from '@coreui/react';
+import CIcon from '@coreui/icons-react';
+import { DocsLink } from 'src/reusable';
 
 const Tabs = () => {
-  const [active, setActive] = useState(1)
-  const lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.'
+  const [active, setActive] = useState(1);
+  const lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.';
 
   return (
     <CRow>
@@ -25,7 +25,7 @@ const Tabs = () => {
         <CCard>
           <CCardHeader>
             Index indentifiers
-            <DocsLink name="CTabs"/>
+            <DocsLink name="CTabs" />
           </CCardHeader>
           <CCardBody>
             <CTabs>
@@ -121,7 +121,7 @@ const Tabs = () => {
                 </CNavItem>
                 <CNavItem>
                   <CNavLink>
-                    <CIcon name="cil-chart-pie"/>
+                    <CIcon name="cil-chart-pie" />
                   </CNavLink>
                 </CNavItem>
               </CNav>
@@ -147,7 +147,7 @@ const Tabs = () => {
             Controlled tabs
           </CCardHeader>
           <CCardBody>
-            <CTabs activeTab={active} onActiveTabChange={idx => setActive(idx)}>
+            <CTabs activeTab={active} onActiveTabChange={(idx) => setActive(idx)}>
               <CNav variant="tabs">
                 <CNavItem>
                   <CNavLink>
@@ -163,7 +163,7 @@ const Tabs = () => {
                 </CNavItem>
                 <CNavItem>
                   <CNavLink>
-                    <CIcon name="cil-chart-pie"/>
+                    <CIcon name="cil-chart-pie" />
                     { active === 2 && ' Messages'}
                   </CNavLink>
                 </CNavItem>
@@ -184,7 +184,7 @@ const Tabs = () => {
         </CCard>
       </CCol>
     </CRow>
-  )
-}
+  );
+};
 
-export default Tabs
+export default Tabs;

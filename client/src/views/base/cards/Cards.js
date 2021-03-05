@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   CBadge,
   CCard,
@@ -10,15 +10,14 @@ import {
   CCollapse,
   CFade,
   CSwitch,
-  CLink
-} from  '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { DocsLink } from 'src/reusable'
-
+  CLink,
+} from '@coreui/react';
+import CIcon from '@coreui/icons-react';
+import { DocsLink } from 'src/reusable';
 
 const Cards = () => {
-  const [collapsed, setCollapsed] = React.useState(true)
-  const [showCard, setShowCard] = React.useState(true)
+  const [collapsed, setCollapsed] = React.useState(true);
+  const [showCard, setShowCard] = React.useState(true);
 
   return (
     <>
@@ -27,7 +26,7 @@ const Cards = () => {
           <CCard>
             <CCardHeader>
               Card title
-              <DocsLink name="CCard"/>
+              <DocsLink name="CCard" />
             </CCardHeader>
             <CCardBody>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
@@ -51,7 +50,7 @@ const Cards = () => {
             <CCardHeader>
               Card with icon
               <div className="card-header-actions">
-                <CIcon name="cil-check" className="float-right"/>
+                <CIcon name="cil-check" className="float-right" />
               </div>
             </CCardHeader>
             <CCardBody>
@@ -66,7 +65,7 @@ const Cards = () => {
             <CCardHeader>
               Card with switch
               <div className="card-header-actions">
-                <CSwitch className={'float-right mb-0'} color={'info'} defaultChecked size={'sm'} tabIndex="0" />
+                <CSwitch className="float-right mb-0" color="info" defaultChecked size="sm" tabIndex="0" />
               </div>
             </CCardHeader>
             <CCardBody>
@@ -389,7 +388,7 @@ const Cards = () => {
                     <CIcon name="cil-settings" />
                   </CLink>
                   <CLink className="card-header-action" onClick={() => setCollapsed(!collapsed)}>
-                    <CIcon name={collapsed ? 'cil-chevron-bottom':'cil-chevron-top'} />
+                    <CIcon name={collapsed ? 'cil-chevron-bottom' : 'cil-chevron-top'} />
                   </CLink>
                   <CLink className="card-header-action" onClick={() => setShowCard(false)}>
                     <CIcon name="cil-x-circle" />
@@ -408,7 +407,7 @@ const Cards = () => {
         </CCol>
       </CRow>
     </>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;

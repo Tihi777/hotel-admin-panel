@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   CButton,
   CCard,
@@ -29,14 +29,14 @@ import {
   CLabel,
   CSelect,
   CRow,
-  CSwitch
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { DocsLink } from 'src/reusable'
+  CSwitch,
+} from '@coreui/react';
+import CIcon from '@coreui/icons-react';
+import { DocsLink } from 'src/reusable';
 
 const BasicForms = () => {
-  const [collapsed, setCollapsed] = React.useState(true)
-  const [showElements, setShowElements] = React.useState(true)
+  const [collapsed, setCollapsed] = React.useState(true);
+  const [showElements, setShowElements] = React.useState(true);
 
   return (
     <>
@@ -46,7 +46,7 @@ const BasicForms = () => {
             <CCardHeader>
               Credit Card
               <small> Form</small>
-              <DocsLink name="-Input"/>
+              <DocsLink name="-Input" />
             </CCardHeader>
             <CCardBody>
               <CRow>
@@ -105,7 +105,7 @@ const BasicForms = () => {
                 <CCol xs="4">
                   <CFormGroup>
                     <CLabel htmlFor="cvv">CVV/CVC</CLabel>
-                    <CInput id="cvv" placeholder="123" required/>
+                    <CInput id="cvv" placeholder="123" required />
                   </CFormGroup>
                 </CCol>
               </CRow>
@@ -184,7 +184,7 @@ const BasicForms = () => {
                     <CLabel htmlFor="email-input">Email Input</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="email" id="email-input" name="email-input" placeholder="Enter Email" autoComplete="email"/>
+                    <CInput type="email" id="email-input" name="email-input" placeholder="Enter Email" autoComplete="email" />
                     <CFormText className="help-block">Please enter your email</CFormText>
                   </CCol>
                 </CFormGroup>
@@ -218,11 +218,11 @@ const BasicForms = () => {
                     <CLabel htmlFor="textarea-input">Textarea</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CTextarea 
-                      name="textarea-input" 
-                      id="textarea-input" 
+                    <CTextarea
+                      name="textarea-input"
+                      id="textarea-input"
                       rows="9"
-                      placeholder="Content..." 
+                      placeholder="Content..."
                     />
                   </CCol>
                 </CFormGroup>
@@ -272,11 +272,11 @@ const BasicForms = () => {
                     <CLabel htmlFor="disabledSelect">Disabled Select</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CSelect 
-                      custom 
-                      name="disabledSelect" 
-                      id="disabledSelect" 
-                      disabled 
+                    <CSelect
+                      custom
+                      name="disabledSelect"
+                      id="disabledSelect"
+                      disabled
                       autoComplete="name"
                     >
                       <option value="0">Please select</option>
@@ -372,10 +372,10 @@ const BasicForms = () => {
                   <CCol md="3"><CLabel>Checkboxes</CLabel></CCol>
                   <CCol md="9">
                     <CFormGroup variant="checkbox" className="checkbox">
-                      <CInputCheckbox 
-                        id="checkbox1" 
-                        name="checkbox1" 
-                        value="option1" 
+                      <CInputCheckbox
+                        id="checkbox1"
+                        name="checkbox1"
+                        value="option1"
                       />
                       <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox1">Option 1</CLabel>
                     </CFormGroup>
@@ -395,11 +395,11 @@ const BasicForms = () => {
                   </CCol>
                   <CCol md="9">
                     <CFormGroup variant="custom-checkbox" inline>
-                      <CInputCheckbox 
-                        custom 
-                        id="inline-checkbox1" 
-                        name="inline-checkbox1" 
-                        value="option1" 
+                      <CInputCheckbox
+                        custom
+                        id="inline-checkbox1"
+                        name="inline-checkbox1"
+                        value="option1"
                       />
                       <CLabel variant="custom-checkbox" htmlFor="inline-checkbox1">One</CLabel>
                     </CFormGroup>
@@ -416,7 +416,7 @@ const BasicForms = () => {
                 <CFormGroup row>
                   <CLabel col md="3" htmlFor="file-input">File input</CLabel>
                   <CCol xs="12" md="9">
-                    <CInputFile id="file-input" name="file-input"/>
+                    <CInputFile id="file-input" name="file-input" />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
@@ -424,9 +424,9 @@ const BasicForms = () => {
                     <CLabel>Multiple File input</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInputFile 
-                      id="file-multiple-input" 
-                      name="file-multiple-input" 
+                    <CInputFile
+                      id="file-multiple-input"
+                      name="file-multiple-input"
                       multiple
                       custom
                     />
@@ -438,7 +438,7 @@ const BasicForms = () => {
                 <CFormGroup row>
                   <CLabel col md={3}>Custom file input</CLabel>
                   <CCol xs="12" md="9">
-                    <CInputFile custom id="custom-file-input"/>
+                    <CInputFile custom id="custom-file-input" />
                     <CLabel htmlFor="custom-file-input" variant="custom-file">
                       Choose file...
                     </CLabel>
@@ -496,7 +496,7 @@ const BasicForms = () => {
                     <CLabel htmlFor="hf-password">Password</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="password" id="hf-password" name="hf-password" placeholder="Enter Password..." autoComplete="current-password"/>
+                    <CInput type="password" id="hf-password" name="hf-password" placeholder="Enter Password..." autoComplete="current-password" />
                     <CFormText className="help-block">Please enter your password</CFormText>
                   </CCol>
                 </CFormGroup>
@@ -515,12 +515,12 @@ const BasicForms = () => {
               <CForm action="" method="post">
                 <CFormGroup>
                   <CLabel htmlFor="nf-email">Email</CLabel>
-                  <CInput type="email" id="nf-email" name="nf-email" placeholder="Enter Email.." autoComplete="email"/>
+                  <CInput type="email" id="nf-email" name="nf-email" placeholder="Enter Email.." autoComplete="email" />
                   <CFormText className="help-block">Please enter your email</CFormText>
                 </CFormGroup>
                 <CFormGroup>
                   <CLabel htmlFor="nf-password">Password</CLabel>
-                  <CInput type="password" id="nf-password" name="nf-password" placeholder="Enter Password.." autoComplete="current-password"/>
+                  <CInput type="password" id="nf-password" name="nf-password" placeholder="Enter Password.." autoComplete="current-password" />
                   <CFormText className="help-block">Please enter your password</CFormText>
                 </CFormGroup>
               </CForm>
@@ -786,9 +786,9 @@ const BasicForms = () => {
                   <CCol md="12">
                     <CInputGroup>
                       <CDropdown className="input-group-prepend">
-                          <CDropdownToggle caret color="primary">
-                            Dropdown
-                          </CDropdownToggle>
+                        <CDropdownToggle caret color="primary">
+                          Dropdown
+                        </CDropdownToggle>
                         <CDropdownMenu>
                           <CDropdownItem>Action</CDropdownItem>
                           <CDropdownItem>Another Action</CDropdownItem>
@@ -991,7 +991,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText>Username</CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="email" id="username3" name="username3" autoComplete="name"/>
+                    <CInput type="email" id="username3" name="username3" autoComplete="name" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1002,7 +1002,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText>Email</CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="email" id="email3" name="email3" autoComplete="username"/>
+                    <CInput type="email" id="email3" name="email3" autoComplete="username" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1013,7 +1013,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText>Password</CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" id="password3" name="password3" autoComplete="current-password"/>
+                    <CInput type="password" id="password3" name="password3" autoComplete="current-password" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1035,7 +1035,7 @@ const BasicForms = () => {
               <CForm action="" method="post">
                 <CFormGroup>
                   <CInputGroup>
-                    <CInput id="username2" name="username2" placeholder="Username" autoComplete="name"/>
+                    <CInput id="username2" name="username2" placeholder="Username" autoComplete="name" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1043,7 +1043,7 @@ const BasicForms = () => {
                 </CFormGroup>
                 <CFormGroup>
                   <CInputGroup>
-                    <CInput type="email" id="email2" name="email2" placeholder="Email" autoComplete="username"/>
+                    <CInput type="email" id="email2" name="email2" placeholder="Email" autoComplete="username" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1051,7 +1051,7 @@ const BasicForms = () => {
                 </CFormGroup>
                 <CFormGroup>
                   <CInputGroup>
-                    <CInput type="password" id="password2" name="password2" placeholder="Password" autoComplete="current-password"/>
+                    <CInput type="password" id="password2" name="password2" placeholder="Password" autoComplete="current-password" />
                     <CInputGroupAppend>
                       <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
                     </CInputGroupAppend>
@@ -1076,7 +1076,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput id="username1" name="username1" placeholder="Username" autoComplete="name"/>
+                    <CInput id="username1" name="username1" placeholder="Username" autoComplete="name" />
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup>
@@ -1084,7 +1084,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="email" id="email1" name="email1" placeholder="Email" autoComplete="username"/>
+                    <CInput type="email" id="email1" name="email1" placeholder="Email" autoComplete="username" />
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup>
@@ -1092,7 +1092,7 @@ const BasicForms = () => {
                     <CInputGroupPrepend>
                       <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" id="password1" name="password1" placeholder="Password" autoComplete="current-password"/>
+                    <CInput type="password" id="password1" name="password1" placeholder="Password" autoComplete="current-password" />
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup className="form-actions">
@@ -1105,7 +1105,7 @@ const BasicForms = () => {
       </CRow>
       <CRow>
         <CCol xs="12">
-          <CFade timeout={300} in={showElements} unmountOnExit={true}>
+          <CFade timeout={300} in={showElements} unmountOnExit>
             <CCard>
               <CCardHeader>
                 Form Elements
@@ -1113,16 +1113,16 @@ const BasicForms = () => {
                   <CButton color="link" className="card-header-action btn-setting">
                     <CIcon name="cil-settings" />
                   </CButton>
-                  <CButton 
-                    color="link" 
-                    className="card-header-action btn-minimize" 
+                  <CButton
+                    color="link"
+                    className="card-header-action btn-minimize"
                     onClick={() => setCollapsed(!collapsed)}
                   >
-                    <CIcon name={ collapsed ? "cil-arrow-top" : "cil-arrow-bottom"} />
+                    <CIcon name={collapsed ? 'cil-arrow-top' : 'cil-arrow-bottom'} />
                   </CButton>
-                  <CButton 
-                    color="link" 
-                    className="card-header-action btn-close" 
+                  <CButton
+                    color="link"
+                    className="card-header-action btn-close"
                     onClick={() => setShowElements(false)}
                   >
                     <CIcon name="cil-x" />
@@ -1205,7 +1205,7 @@ const BasicForms = () => {
         </CCol>
       </CRow>
     </>
-  )
-}
+  );
+};
 
-export default BasicForms
+export default BasicForms;

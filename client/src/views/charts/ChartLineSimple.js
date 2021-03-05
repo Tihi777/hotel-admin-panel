@@ -1,10 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { getColor, deepObjectsMerge } from '@coreui/utils'
-import { CChartLine } from '@coreui/react-chartjs'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { getColor, deepObjectsMerge } from '@coreui/utils';
+import { CChartLine } from '@coreui/react-chartjs';
 
-const ChartLineSimple = props => {
-
+const ChartLineSimple = (props) => {
   const {
     borderColor,
     backgroundColor,
@@ -13,110 +12,99 @@ const ChartLineSimple = props => {
     label,
     pointed,
     ...attributes
-  } = props
+  } = props;
 
-  const pointHoverColor = (()=>{
+  const pointHoverColor = (() => {
     if (pointHoverBackgroundColor) {
-      return pointHoverBackgroundColor
-    } else if (backgroundColor !== 'transparent') {
-      return backgroundColor
+      return pointHoverBackgroundColor;
+    } if (backgroundColor !== 'transparent') {
+      return backgroundColor;
     }
-    return borderColor
-  })()
+    return borderColor;
+  })();
 
-  const defaultDatasets = (()=>{
-    return [
-      {
-        data: dataPoints,
-        borderColor: getColor(borderColor),
-        backgroundColor: getColor(backgroundColor),
-        pointBackgroundColor: getColor(pointHoverColor),
-        pointHoverBackgroundColor: getColor(pointHoverColor),
-        label
-      }
-    ]
-  })()
+  const defaultDatasets = (() => [
+    {
+      data: dataPoints,
+      borderColor: getColor(borderColor),
+      backgroundColor: getColor(backgroundColor),
+      pointBackgroundColor: getColor(pointHoverColor),
+      pointHoverBackgroundColor: getColor(pointHoverColor),
+      label,
+    },
+  ])();
 
-  const pointedOptions = (()=>{
-    return {
-      scales: {
-        xAxes: [
-          {
-            offset: true,
-            gridLines: {
-              color: 'transparent',
-              zeroLineColor: 'transparent'
-            },
-            ticks: {
-              fontSize: 2,
-              fontColor: 'transparent'
-            }
-          }
-        ],
-        yAxes: [
-          {
+  const pointedOptions = (() => ({
+    scales: {
+      xAxes: [
+        {
+          offset: true,
+          gridLines: {
+            color: 'transparent',
+            zeroLineColor: 'transparent',
+          },
+          ticks: {
+            fontSize: 2,
+            fontColor: 'transparent',
+          },
+        },
+      ],
+      yAxes: [
+        {
+          display: false,
+          ticks: {
             display: false,
-            ticks: {
-              display: false,
-              min: Math.min.apply(Math, dataPoints) - 5,
-              max: Math.max.apply(Math, dataPoints) + 5
-            }
-          }
-        ]
-      },
-      elements: {
-        line: {
-          borderWidth: 1
+            min: Math.min.apply(Math, dataPoints) - 5,
+            max: Math.max.apply(Math, dataPoints) + 5,
+          },
         },
-        point: {
-          radius: 4,
-          hitRadius: 10,
-          hoverRadius: 4
-        }
-      }
-    }
-  })()
-
-  const straightOptions = (()=>{
-    return {
-      scales: {
-        xAxes: [{
-          display: false
-        }],
-        yAxes: [{
-          display: false
-        }]
+      ],
+    },
+    elements: {
+      line: {
+        borderWidth: 1,
       },
-      elements: {
-        line: {
-          borderWidth: 2
-        },
-        point: {
-          radius: 0,
-          hitRadius: 10,
-          hoverRadius: 4
-        }
-      }
-    }
-  })()
+      point: {
+        radius: 4,
+        hitRadius: 10,
+        hoverRadius: 4,
+      },
+    },
+  }))();
 
-  const defaultOptions = (()=>{
-    const options = pointed ? pointedOptions : straightOptions
-      return Object.assign({}, options, {
-        maintainAspectRatio: false,
-        legend: {
-          display: false
-        }
-      })
-  })()
+  const straightOptions = (() => ({
+    scales: {
+      xAxes: [{
+        display: false,
+      }],
+      yAxes: [{
+        display: false,
+      }],
+    },
+    elements: {
+      line: {
+        borderWidth: 2,
+      },
+      point: {
+        radius: 0,
+        hitRadius: 10,
+        hoverRadius: 4,
+      },
+    },
+  }))();
 
-  const computedDatasets = (() => {
-    return deepObjectsMerge(defaultDatasets, attributes.datasets || {})
-  })()
+  const defaultOptions = (() => {
+    const options = pointed ? pointedOptions : straightOptions;
+    return { ...options,
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+      } };
+  })();
 
-  const computedOptions = (() => {
-    return deepObjectsMerge(defaultOptions, attributes.options || {})
-  })()
+  const computedDatasets = (() => deepObjectsMerge(defaultDatasets, attributes.datasets || {}))();
+
+  const computedOptions = (() => deepObjectsMerge(defaultOptions, attributes.options || {}))();
 
   // render
 
@@ -127,8 +115,8 @@ const ChartLineSimple = props => {
       options={computedOptions}
       labels={label}
     />
-  )
-}
+  );
+};
 
 ChartLineSimple.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -139,14 +127,14 @@ ChartLineSimple.propTypes = {
   pointHoverBackgroundColor: PropTypes.string,
   dataPoints: PropTypes.array,
   label: PropTypes.string,
-  pointed: PropTypes.bool
+  pointed: PropTypes.bool,
 };
 
 ChartLineSimple.defaultProps = {
   borderColor: 'rgba(255,255,255,.55)',
   backgroundColor: 'transparent',
   dataPoints: [10, 22, 34, 46, 58, 70, 46, 23, 45, 78, 34, 12],
-  label: 'Sales'
+  label: 'Sales',
 };
 
-export default ChartLineSimple
+export default ChartLineSimple;

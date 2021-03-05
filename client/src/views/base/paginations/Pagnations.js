@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
   CCard,
   CCardBody,
   CCardHeader,
-  CPagination
-} from '@coreui/react'
-import { DocsLink } from 'src/reusable'
-
+  CPagination,
+} from '@coreui/react';
+import { DocsLink } from 'src/reusable';
 
 const Paginations = () => {
-  const [currentPage, setCurrentPage] = useState(2)
+  const [currentPage, setCurrentPage] = useState(2);
 
   return (
     <>
       <CCard>
         <CCardHeader>
           Pagination
-          <DocsLink name="CPagination"/>
+          <DocsLink name="CPagination" />
         </CCardHeader>
         <CCardBody>
           <h6>Default</h6>
@@ -25,7 +24,7 @@ const Paginations = () => {
             pages={10}
             onActivePageChange={setCurrentPage}
           />
-          <br></br>
+          <br />
 
           <h6>Small</h6>
           <CPagination
@@ -34,7 +33,7 @@ const Paginations = () => {
             pages={10}
             onActivePageChange={setCurrentPage}
           />
-          <br></br>
+          <br />
 
           <div className="d-md-down-none">
             <h6>Large</h6>
@@ -44,7 +43,7 @@ const Paginations = () => {
               pages={10}
               onActivePageChange={setCurrentPage}
             />
-            <br></br>
+            <br />
           </div>
 
           <div>currentPage: {currentPage}</div>
@@ -62,7 +61,7 @@ const Paginations = () => {
             pages={10}
             onActivePageChange={setCurrentPage}
           />
-          <br></br>
+          <br />
 
           <h6>Center alignment</h6>
           <CPagination
@@ -72,7 +71,7 @@ const Paginations = () => {
             pages={10}
             onActivePageChange={setCurrentPage}
           />
-          <br></br>
+          <br />
 
           <h6>Right (end) alignment</h6>
           <CPagination
@@ -81,13 +80,13 @@ const Paginations = () => {
             pages={10}
             onActivePageChange={setCurrentPage}
           />
-          <br></br>
+          <br />
 
           <div>currentPage: {currentPage}</div>
         </CCardBody>
       </CCard>
     </>
-  )
-}
+  );
+};
 
-export default Paginations
+export default Paginations;
