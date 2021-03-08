@@ -2,9 +2,10 @@ import React from 'react';
 
 // TODO: Переименовать компонент
 const Booking = React.lazy(() => import('./views/custom/Booking/Booking'));
-const Guests = React.lazy(() => import('./views/custom/Guests/Guests'));
-const Services = React.lazy(() => import('./views/custom/Services/Services'));
-const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
+const EmployeePositions = React.lazy(() => import('./views/custom/EmployeePositions/EmployeePositions'));
+// const Guests = React.lazy(() => import('./views/custom/Guests/Guests'));
+// const Services = React.lazy(() => import('./views/custom/Services/Services'));
+// const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
 
 // TODO: Удалить лишние коспоненты
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
@@ -46,9 +47,12 @@ const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 
 const routes = [
-  { path: '/', exact: true, name: 'Home' },
+  { path: '/', exact: true, name: 'Главная' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/booking', name: 'Бронирования', component: Booking },
+  // TODO: исправить компонент на сотдрудники
+  { path: '/employee', name: 'Персонал', component: EmployeePositions, exact: true },
+  { path: '/employee/positions', name: 'Должности', component: EmployeePositions },
 
   // TODO: Удалить лишние маршруты
   { path: '/theme', name: 'Theme', component: Colors, exact: true },

@@ -1,16 +1,16 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from 'react';
+import CIcon from '@coreui/icons-react';
 
-const _nav =  [
+const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
     badge: {
       color: 'info',
       text: 'NEW',
-    }
+    },
   },
   {
     _tag: 'CSidebarNavItem',
@@ -32,28 +32,28 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Управление']
+    _children: ['Управление'],
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Персонал',
-    route: '/resources',
+    route: '/employee',
     icon: 'cil-sitemap',
     _children: [
       {
         _tag: 'CSidebarNavItem',
         name: 'Сотрудники',
-        to: '/resources/employees',
+        to: '/employee/list',
       },
       {
         _tag: 'CSidebarNavItem',
         name: 'Должности',
-        to: '/resources/positions',
+        to: '/employee/positions',
       },
       {
         _tag: 'CSidebarNavItem',
         name: 'Инвентарь',
-        to: '/resources/equipment',
+        to: '/employee/equipment',
       },
     ],
   },
@@ -80,6 +80,6 @@ const _nav =  [
       },
     ],
   },
-]
+];
 
-export default _nav
+export default _nav;

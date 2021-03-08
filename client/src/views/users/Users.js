@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import {
-  CBadge,
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CCol,
-  CDataTable,
-  CRow,
-  CPagination,
-} from '@coreui/react';
+import { CBadge, CCard, CCardBody, CCardHeader, CCol, CDataTable, CRow, CPagination } from '@coreui/react';
 
 import usersData from './UsersData';
 
-const getBadge = (status) => {
+const getBadge = status => {
   switch (status) {
-    case 'Active': return 'success';
-    case 'Inactive': return 'secondary';
-    case 'Pending': return 'warning';
-    case 'Banned': return 'danger';
-    default: return 'primary';
+    case 'Active':
+      return 'success';
+    case 'Inactive':
+      return 'secondary';
+    case 'Pending':
+      return 'warning';
+    case 'Banned':
+      return 'danger';
+    default:
+      return 'primary';
   }
 };
 
@@ -29,7 +25,7 @@ const Users = () => {
   const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1);
   const [page, setPage] = useState(currentPage);
 
-  const pageChange = (newPage) => {
+  const pageChange = newPage => {
     currentPage !== newPage && history.push(`/users?page=${newPage}`);
   };
 
@@ -48,23 +44,17 @@ const Users = () => {
           <CCardBody>
             <CDataTable
               items={usersData}
-              fields={[
-                { key: 'name', _classes: 'font-weight-bold' },
-                'registered', 'role', 'status',
-              ]}
+              fields={[{ key: 'name', _classes: 'font-weight-bold' }, 'registered', 'role', 'status']}
               hover
               striped
               itemsPerPage={5}
               activePage={page}
               clickableRows
-              onRowClick={(item) => history.push(`/users/${item.id}`)}
+              onRowClick={item => history.push(`/users/${item.id}`)}
               scopedSlots={{
-                status:
-                (item) => (
+                status: item => (
                   <td>
-                    <CBadge color={getBadge(item.status)}>
-                      {item.status}
-                    </CBadge>
+                    <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
                   </td>
                 ),
               }}

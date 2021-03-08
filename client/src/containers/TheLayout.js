@@ -1,25 +1,21 @@
-import React from 'react'
-import {
-  TheContent,
-  TheSidebar,
-  TheFooter,
-  TheHeader
-} from './index'
+import React from 'react';
+import { TheContent, TheFooter, TheHeader, TheSidebar } from './index';
+import Modal from '../views/custom/Modal/Modal';
 
 const TheLayout = () => {
-
   return (
     <div className="c-app c-default-layout">
-      <TheSidebar/>
+      <TheSidebar />
       <div className="c-wrapper">
-        <TheHeader/>
+        <TheHeader />
         <div className="c-body">
-          <TheContent/>
+          <TheContent />
         </div>
-        <TheFooter/>
+        <TheFooter />
+        <Modal />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TheLayout
+export default TheLayout;

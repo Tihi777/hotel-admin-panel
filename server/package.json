@@ -1,0 +1,33 @@
+{
+  "name": "hotel-admin-panel",
+  "version": "1.0.0",
+  "description": "Admin panel for Hotel management",
+  "author": {
+    "name": "Aleksandr Kazanin",
+    "facebook": "https://www.facebook.com/aleksandr.kazanin.146",
+    "github": "https://github.com/Tihi777"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "cross-env NODE_ENV=development nodemon index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.19",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
+  }
+}

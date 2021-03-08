@@ -4,7 +4,11 @@ src/App.test.js
 src/setupTests.js
 src/containers
 src/reusable
-src/base
+src/views/base/**
+src/views/buttons/**
+src/views/charts/**
+src/views/notifications/**
+src/views/widgets/**
 src/buttons
 assets/
 package.json
