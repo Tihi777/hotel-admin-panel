@@ -25,15 +25,13 @@ const Login = () => (
             <CCard className="p-4">
               <CCardBody>
                 <CForm>
-                  <h1>Login</h1>
-                  <p className="text-muted">Sign In to your account</p>
+                  <h1>Вход</h1>
+                  <p className="text-muted">Войдите в ваш аккаунт</p>
                   <CInputGroup className="mb-3">
                     <CInputGroupPrepend>
-                      <CInputGroupText>
-                        <CIcon name="cil-user" />
-                      </CInputGroupText>
+                      <CInputGroupText>@</CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="text" placeholder="Username" autoComplete="username" />
+                    <CInput type="email" placeholder="Электронный адрес" autoComplete="email" />
                   </CInputGroup>
                   <CInputGroup className="mb-4">
                     <CInputGroupPrepend>
@@ -41,14 +39,13 @@ const Login = () => (
                         <CIcon name="cil-lock-locked" />
                       </CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" placeholder="Password" autoComplete="current-password" />
+                    <CInput type="password" placeholder="Пароль" autoComplete="current-password" />
                   </CInputGroup>
                   <CRow>
                     <CCol xs="6">
-                      <CButton color="primary" className="px-4">Login</CButton>
-                    </CCol>
-                    <CCol xs="6" className="text-right">
-                      <CButton color="link" className="px-0">Forgot password?</CButton>
+                      <CButton color="primary" className="px-4">
+                        Войти
+                      </CButton>
                     </CCol>
                   </CRow>
                 </CForm>
@@ -57,13 +54,11 @@ const Login = () => (
             <CCard className="text-white bg-primary py-5 d-md-down-none" style={{ width: '44%' }}>
               <CCardBody className="text-center">
                 <div>
-                  <h2>Sign up</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                  <h2>Регистрация</h2>
+                  <p>
+                    Для регистрации необходимо попросить администратора гостиницы создать для вас аккаунт и выслать вам
+                    данные для входа.
                   </p>
-                  <Link to="/register">
-                    <CButton color="primary" className="mt-3" active tabIndex={-1}>Register Now!</CButton>
-                  </Link>
                 </div>
               </CCardBody>
             </CCard>

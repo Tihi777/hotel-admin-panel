@@ -19,11 +19,20 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'import/extensions': 0,
+    'import/no-unresolved': [2, { ignore: ['src/reusable'] }],
+    'arrow-parens': 0,
+    'no-unused-expressions': 0,
+    'implicit-arrow-linebreak': 0,
     'react/prop-types': 0,
+    'no-unused-vars': 0,
+    'no-shadow': 0,
+    'comma-dangle': 0,
+    'function-paren-newline': 0,
+    'no-confusing-arrow': 0,
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
-    'max-len': [2, 120],
+    'max-len': [1, 120],
     'no-multiple-empty-lines': [
       'error',
       {
@@ -45,6 +54,7 @@ module.exports = {
     'jsx-a11y/alt-text': 0,
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/control-has-associated-label': 0,
     'react/no-array-index-key': 0,
     'jsx-a11y/anchor-is-valid': [
       'error',
