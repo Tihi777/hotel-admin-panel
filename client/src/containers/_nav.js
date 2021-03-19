@@ -66,7 +66,7 @@ const _nav = [
       {
         _tag: 'CSidebarNavItem',
         name: 'Гостиницы',
-        to: '/hotels/',
+        to: '/complex/hotels',
       },
       {
         _tag: 'CSidebarNavItem',

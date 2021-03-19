@@ -5,6 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import userReducer from './reducers/userReducer';
 import modalReducer from './reducers/modalReducer';
 import employeePositionReducer from './reducers/employeePositionReducer';
+import hotelReducer from './reducers/hotelReducer';
 
 const initialState = {
   sidebarShow: 'responsive',
@@ -25,6 +26,7 @@ const reducers = combineReducers({
   user: userReducer,
   modal: modalReducer,
   employeePositions: employeePositionReducer,
+  hotels: hotelReducer,
   changeState,
 });
 
