@@ -26,7 +26,7 @@ const EmployeePositions = () => {
   return (
     <CRow>
       <CCol md="3" sm="6" xs="12">
-        <CButton onClick={openCreateModal} color="success" className="h-100 w-100 mb-4">
+        <CButton onClick={openCreateModal} color="success" className="w-100 mb-4" style={{ height: '150px' }}>
           <CIcon size="2xl" name="cilMedicalCross" />
           <h6>Добавить новую должность</h6>
         </CButton>

@@ -2,10 +2,11 @@ import React from 'react';
 
 // TODO: Переименовать компонент
 const Booking = React.lazy(() => import('./views/custom/Booking/Booking'));
+const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
 const EmployeePositions = React.lazy(() => import('./views/custom/EmployeePositions/EmployeePositions'));
+const Hotels = React.lazy(() => import('./views/custom/Hotels/Hotels'));
 // const Guests = React.lazy(() => import('./views/custom/Guests/Guests'));
 // const Services = React.lazy(() => import('./views/custom/Services/Services'));
-// const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
 
 // TODO: Удалить лишние коспоненты
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
@@ -52,7 +53,11 @@ const routes = [
   { path: '/booking', name: 'Бронирования', component: Booking },
   // TODO: исправить компонент на сотдрудники
   { path: '/employee', name: 'Персонал', component: EmployeePositions, exact: true },
+  { path: '/employee/list', name: 'Сотрудники', component: Employees },
   { path: '/employee/positions', name: 'Должности', component: EmployeePositions },
+
+  { path: '/complex', name: 'Комплекс', component: Hotels, exact: true },
+  { path: '/complex/hotels', name: 'Гостиницы', component: Hotels },
 
   // TODO: Удалить лишние маршруты
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
