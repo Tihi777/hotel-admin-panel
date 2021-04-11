@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CButton,
-  CCardBody,
   CCol,
   CForm,
   CFormGroup,
-  CFormText,
   CInput,
   CLabel,
   CModal,

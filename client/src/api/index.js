@@ -12,3 +12,8 @@ export const fetchHotels = () => api.get('/hotel');
 export const createHotel = hotel => api.post('/hotel', hotel);
 export const updateHotel = (id, updatedHotel) => api.patch(`/hotel/${id}`, updatedHotel);
 export const deleteHotel = id => api.delete(`/hotel/${id}`);
+
+export const fetchRoomTypes = () => api.get('/room/types');
+export const createRoomType = roomType => api.post('/room/types', roomType);
+export const updateRoomType = (id, updatedRoomType) => api.patch(`/room/types/${id}`, updatedRoomType);
+export const deleteRoomType = id => api.delete(`/room/types/${id}`);

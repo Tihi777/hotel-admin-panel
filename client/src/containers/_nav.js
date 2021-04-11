@@ -71,12 +71,12 @@ const _nav = [
       {
         _tag: 'CSidebarNavItem',
         name: 'Номера',
-        to: '/rooms/',
+        to: '/rooms',
       },
       {
         _tag: 'CSidebarNavItem',
         name: 'Типы номеров',
-        to: '/roomtypes/',
+        to: '/room-types',
       },
     ],
   },

@@ -16,7 +16,7 @@ export const createHotel = ash(async (req, res) => {
 });
 
 export const updateHotel = ash(async (req, res) => {
-  const { name, address, description, image } = req.body;
+  const { name, address, description, image, score } = req.body;
 
   const hotel = await Hotel.findById(req.params.id);
 
@@ -25,6 +25,7 @@ export const updateHotel = ash(async (req, res) => {
     hotel.address = address;
     hotel.description = description;
     hotel.image = image;
+    hotel.score = score;
 
     const updatedHotel = await hotel.save();
     res.json(updatedHotel);

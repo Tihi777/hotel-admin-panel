@@ -5,6 +5,7 @@ const Booking = React.lazy(() => import('./views/custom/Booking/Booking'));
 const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
 const EmployeePositions = React.lazy(() => import('./views/custom/EmployeePositions/EmployeePositions'));
 const Hotels = React.lazy(() => import('./views/custom/Hotels/Hotels'));
+const RoomTypes = React.lazy(() => import('./views/custom/RoomTypes/RoomTypes'));
 // const Guests = React.lazy(() => import('./views/custom/Guests/Guests'));
 // const Services = React.lazy(() => import('./views/custom/Services/Services'));
 
@@ -58,6 +59,7 @@ const routes = [
 
   { path: '/complex', name: 'Комплекс', component: Hotels, exact: true },
   { path: '/complex/hotels', name: 'Гостиницы', component: Hotels },
+  { path: '/room-types', name: 'Типы номеров', component: RoomTypes },
 
   // TODO: Удалить лишние маршруты
   { path: '/theme', name: 'Theme', component: Colors, exact: true },

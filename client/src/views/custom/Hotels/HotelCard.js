@@ -24,7 +24,7 @@ const HotelCard = ({ name, address, description, image, score, numberOfRooms, _i
                   <div className="hotel-card__address">{address}</div>
                   <CLink
                     className="card-header-action text-info d-flex align-items-center"
-                    onClick={() => dispatch(setActiveHotel({ name, address, description, image, _id }))}
+                    onClick={() => dispatch(setActiveHotel({ name, address, description, image, score, _id }))}
                   >
                     <CIcon name="cil-pencil" />
                   </CLink>
@@ -36,8 +36,8 @@ const HotelCard = ({ name, address, description, image, score, numberOfRooms, _i
                   </CLink>
                   <div className="hotel-card__score">
                     Рейтинг: {score} &nbsp;
-                    {new Array(Math.floor(score)).fill(undefined).map(() => (
-                      <CIcon name="cil-star" className="text-warning" />
+                    {new Array(Math.floor(score)).fill(undefined).map((_, number) => (
+                      <CIcon name="cil-star" className="text-warning" key={number} />
                     ))}
                     {score % 1 !== 0 && <CIcon name="cil-star-half" className="text-warning" />}
                   </div>
