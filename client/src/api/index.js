@@ -17,3 +17,8 @@ export const fetchRoomTypes = () => api.get('/room/types');
 export const createRoomType = roomType => api.post('/room/types', roomType);
 export const updateRoomType = (id, updatedRoomType) => api.patch(`/room/types/${id}`, updatedRoomType);
 export const deleteRoomType = id => api.delete(`/room/types/${id}`);
+
+export const fetchRooms = () => api.get('/rooms');
+export const createRoom = room => api.post('/rooms', room);
+export const updateRoom = (id, updatedRoom) => api.patch(`/rooms/${id}`, updatedRoom);
+export const deleteRoom = id => api.delete(`/rooms/${id}`);

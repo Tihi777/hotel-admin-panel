@@ -7,8 +7,9 @@ import colors from "colors";
 
 import employeeRoutes from "./routes/employeeRoutes.js";
 import employeePositionRoutes from "./routes/employeePositionRoutes.js";
-import hotelRouts from "./routes/hotelRoutes.js";
-import roomTypeRouts from "./routes/roomTypeRoutes.js";
+import hotelRoutes from "./routes/hotelRoutes.js";
+import roomTypeRoutes from "./routes/roomTypeRoutes.js";
+import roomRoutes from "./routes/roomRoutes.js";
 
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
@@ -27,8 +28,9 @@ app.use(cors());
 
 app.use("/api/employee", employeeRoutes);
 app.use("/api/employee/positions", employeePositionRoutes);
-app.use("/api/hotel", hotelRouts);
-app.use("/api/room/types", roomTypeRouts);
+app.use("/api/hotel", hotelRoutes);
+app.use("/api/rooms/", roomRoutes);
+app.use("/api/room/types", roomTypeRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

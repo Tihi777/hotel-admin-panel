@@ -10,7 +10,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js --watch ../server",
     "start-dev": "cross-env NODE_ENV=development nodemon index.js"
   },
   "license": "ISC",

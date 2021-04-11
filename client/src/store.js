@@ -7,6 +7,7 @@ import modalReducer from './reducers/modalReducer';
 import employeePositionReducer from './reducers/employeePositionReducer';
 import hotelReducer from './reducers/hotelReducer';
 import roomTypeReducer from './reducers/roomTypeReducer';
+import roomReducer from './reducers/roomReducer';
 
 const initialState = {
   sidebarShow: 'responsive',
@@ -29,6 +30,7 @@ const reducers = combineReducers({
   employeePositions: employeePositionReducer,
   hotels: hotelReducer,
   roomTypes: roomTypeReducer,
+  rooms: roomReducer,
   changeState,
 });
 

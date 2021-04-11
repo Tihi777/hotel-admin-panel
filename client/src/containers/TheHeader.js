@@ -32,7 +32,7 @@ const TheHeader = () => {
 
   const toggleSidebarMobile = () => {
     const val = [false, 'responsive'].includes(sidebarShow) ? true : 'responsive';
-    dispatch({ type: 'set', sidebarShow: val });
+    dispatch({ type: 'set', sidebarShow: !Boolean(sidebarShow) });
   };
 
   // useEffect(() => {
