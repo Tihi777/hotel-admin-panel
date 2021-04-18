@@ -1,6 +1,6 @@
-import ash from "express-async-handler";
-import Room from "../models/roomModel.js";
-import RoomType from '../models/roomTypeModel.js';
+import ash from 'express-async-handler';
+import Room from '../models/roomModel.js';
+import { addRoom, removeRoomFromHotel } from './hotelController.js';
 
 export const getRooms = ash(async (req, res) => {
   const rooms = await Room.find().populate("roomType");
@@ -12,6 +12,8 @@ export const createRoom = ash(async (req, res) => {
   const room = new Room(req.body);
 
   const createdRoom = await room.save();
+
+  await addRoom(createdRoom._id, req.body.hotelId);
 
   const populatedRoom = await Room.findById(createdRoom._id).populate(
     "roomType"
@@ -25,7 +27,7 @@ export const updateRoom = ash(async (req, res) => {
 
   const room = await Room.findById(req.params.id);
 
-  // if (room) {
+  if (room) {
     room.number = number;
     room.floor = floor;
     room.status = status;
@@ -33,23 +35,23 @@ export const updateRoom = ash(async (req, res) => {
     room.hotelName = hotelName;
     room.hotelId = hotelId;
 
-    room.save().then(result => {
-      console.log(result);
+    room.save().then(() => {
       Room.populate(room, {path: 'roomType'}).then(room => {
-        console.log(room);
         res.json(room)
       })
     });
 
-  // } else {
-  //   res.status(404);
-  //   throw new Error("RoomType not found");
-  // }
+  } else {
+    res.status(404);
+    throw new Error("Room not found");
+  }
 
 });
 
 export const deleteRoom = ash(async (req, res) => {
   const room = await Room.findById(req.params.id);
+
+  removeRoomFromHotel(req.params.id, room.hotelId);
 
   if (room) {
     await room.remove();
@@ -58,4 +60,13 @@ export const deleteRoom = ash(async (req, res) => {
     res.status(404);
     throw new Error("Rooms not found");
   }
+});
+
+export const deleteRooms = ash(async rooms => {
+  rooms.map(async id => {
+    const room = await Room.findById(id);
+
+    if (room)
+      await room.remove();
+  })
 });

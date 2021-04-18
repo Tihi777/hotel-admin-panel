@@ -21,7 +21,7 @@ const Rooms = () => {
   useEffect(() => {
     dispatch(getRooms());
   }, []);
-  console.log(rooms);
+
   return (
     <div>
       <RoomEditForm />

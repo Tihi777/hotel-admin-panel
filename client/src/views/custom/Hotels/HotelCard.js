@@ -5,7 +5,7 @@ import CIcon from '@coreui/icons-react';
 import { deleteHotel, setActiveHotel } from '../../../actions/hotelActions';
 import hotelTemplate from '../../../assets/images/hotelTemplate.png';
 
-const HotelCard = ({ name, address, description, image, score, numberOfRooms, _id }) => {
+const HotelCard = ({ name, address, description, image, score, rooms, _id }) => {
   const dispatch = useDispatch();
 
   return (
@@ -46,7 +46,7 @@ const HotelCard = ({ name, address, description, image, score, numberOfRooms, _i
               <CCardBody className="w-100 h-auto">
                 <div className="hotel-card__body">
                   <div className="hotel-card__description">{description}</div>
-                  <div className="hotel-card__rooms">Номера: {numberOfRooms}</div>
+                  <div className="hotel-card__rooms">Номера: {rooms.length}</div>
                 </div>
               </CCardBody>
             </div>

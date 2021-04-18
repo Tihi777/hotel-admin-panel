@@ -20,9 +20,15 @@ const hotelSchema = mongoose.Schema({
     type: Number,
     default: 4.5,
   },
+  rooms: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Room",
+  }],
   numberOfRooms: {
     type: Number,
-    default: 0,
+    default: function() {
+      return this.rooms.length;
+    },
   },
 });
 

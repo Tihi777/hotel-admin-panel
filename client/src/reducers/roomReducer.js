@@ -1,7 +1,6 @@
 import { CREATE_ROOM, FETCH_ROOMS, UPDATE_ROOM, DELETE_ROOM, SET_ACTIVE_ROOM } from '../constants/roomConstants';
 
 const roomReducer = (rooms = { list: [], activeRoom: {} }, { type, payload }) => {
-  console.log(type, payload);
   switch (type) {
     case CREATE_ROOM:
       return { ...rooms, list: [...rooms.list, payload] };
