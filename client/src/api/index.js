@@ -20,6 +20,11 @@ export const createHotel = hotel => api.post('/hotel', hotel);
 export const updateHotel = (id, updatedHotel) => api.patch(`/hotel/${id}`, updatedHotel);
 export const deleteHotel = id => api.delete(`/hotel/${id}`);
 
+export const fetchGuests = () => api.get('/guests');
+export const createGuest = guest => api.post('/guests', guest);
+export const updateGuest = (id, updatedGuest) => api.patch(`/guests/${id}`, updatedGuest);
+export const deleteGuest = id => api.delete(`/guests/${id}`);
+
 export const fetchRoomTypes = () => api.get('/room/types');
 export const createRoomType = roomType => api.post('/room/types', roomType);
 export const updateRoomType = (id, updatedRoomType) => api.patch(`/room/types/${id}`, updatedRoomType);

@@ -5,8 +5,6 @@ import { CBadge, CCard, CCardBody, CCardHeader, CCol, CDataTable, CLink, CPagina
 import CIcon from '@coreui/icons-react';
 import 'moment/locale/ru';
 import Moment from 'react-moment';
-
-import usersData from '../../users/UsersData';
 import { openModal } from '../../../actions/modalActions';
 import { EDIT_EMPLOYEES_MODAL } from '../../../constants/modalConstants';
 import { getEmployeePositions } from '../../../actions/employeePositionActions';
@@ -41,10 +39,6 @@ const Employees = () => {
 
   const openCreateModal = () => {
     dispatch(openModal(EDIT_EMPLOYEES_MODAL, { title: 'Добавление сотрудника' }));
-  };
-
-  const openEditModal = id => {
-    dispatch(openModal(EDIT_EMPLOYEES_MODAL, { title: 'Редактирование сотрудника', currentId: id }));
   };
 
   useEffect(() => {

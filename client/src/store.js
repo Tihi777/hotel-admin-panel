@@ -9,6 +9,7 @@ import hotelReducer from './reducers/hotelReducer';
 import roomTypeReducer from './reducers/roomTypeReducer';
 import roomReducer from './reducers/roomReducer';
 import employeeReducer from './reducers/employeeReducer';
+import guestReducer from './reducers/guestReducer';
 
 const initialState = {
   sidebarShow: 'responsive',
@@ -33,6 +34,7 @@ const reducers = combineReducers({
   hotels: hotelReducer,
   roomTypes: roomTypeReducer,
   rooms: roomReducer,
+  guests: guestReducer,
   changeState,
 });
 

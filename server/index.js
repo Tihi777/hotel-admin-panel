@@ -11,6 +11,7 @@ import employeePositionRoutes from "./routes/employeePositionRoutes.js";
 import hotelRoutes from "./routes/hotelRoutes.js";
 import roomTypeRoutes from "./routes/roomTypeRoutes.js";
 import roomRoutes from "./routes/roomRoutes.js";
+import guestRoutes from "./routes/guestsRoutes.js";
 
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
@@ -30,6 +31,7 @@ app.use(cors());
 app.use("/api/login", userRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/employee/positions", employeePositionRoutes);
+app.use("/api/guests", guestRoutes);
 app.use("/api/hotel", hotelRoutes);
 app.use("/api/rooms/", roomRoutes);
 app.use("/api/room/types", roomTypeRoutes);
