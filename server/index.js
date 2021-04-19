@@ -6,6 +6,7 @@ import cors from "cors";
 import colors from "colors";
 
 import employeeRoutes from "./routes/employeeRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 import employeePositionRoutes from "./routes/employeePositionRoutes.js";
 import hotelRoutes from "./routes/hotelRoutes.js";
 import roomTypeRoutes from "./routes/roomTypeRoutes.js";
@@ -23,10 +24,11 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.use(express.json({ limit: "50mb" }));
+app.use(express.json({ limit: "5mb" }));
 app.use(cors());
 
-app.use("/api/employee", employeeRoutes);
+app.use("/api/login", userRoutes);
+app.use("/api/employees", employeeRoutes);
 app.use("/api/employee/positions", employeePositionRoutes);
 app.use("/api/hotel", hotelRoutes);
 app.use("/api/rooms/", roomRoutes);

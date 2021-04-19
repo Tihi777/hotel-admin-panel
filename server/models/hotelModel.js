@@ -20,13 +20,21 @@ const hotelSchema = mongoose.Schema({
     type: Number,
     default: 4.5,
   },
-  rooms: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Room",
-  }],
+  rooms: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Room",
+    },
+  ],
+  employees: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Employee",
+    },
+  ],
   numberOfRooms: {
     type: Number,
-    default: function() {
+    default: function () {
       return this.rooms.length;
     },
   },

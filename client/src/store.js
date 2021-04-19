@@ -8,6 +8,7 @@ import employeePositionReducer from './reducers/employeePositionReducer';
 import hotelReducer from './reducers/hotelReducer';
 import roomTypeReducer from './reducers/roomTypeReducer';
 import roomReducer from './reducers/roomReducer';
+import employeeReducer from './reducers/employeeReducer';
 
 const initialState = {
   sidebarShow: 'responsive',
@@ -27,6 +28,7 @@ const middleware = [thunk];
 const reducers = combineReducers({
   user: userReducer,
   modal: modalReducer,
+  employees: employeeReducer,
   employeePositions: employeePositionReducer,
   hotels: hotelReducer,
   roomTypes: roomTypeReducer,

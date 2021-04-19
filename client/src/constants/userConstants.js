@@ -1,3 +1,3 @@
 export const USER_SIGNIN = 'USER_SIGNIN';
-export const USER_SIGNUP = 'USER_SIGNUP';
-export const USER_LOGOUT = 'USER_LOGOUT';
+export const USER_SIGNIN_FAILED = 'USER_SIGNIN_FAILED';
+export const USER_SIGNOUT = 'USER_SIGNOUT';

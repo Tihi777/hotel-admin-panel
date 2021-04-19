@@ -12,6 +12,13 @@ const employeeSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
+    hotelName: {
+      type: String,
+      required: true,
+    },
+    hotelId: {
+      type: String,
+    },
     password: {
       type: String,
       required: true,
@@ -21,7 +28,11 @@ const employeeSchema = mongoose.Schema(
       required: true,
       default: false,
     },
-    position: {},
+    position: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "EmployeePosition",
+    },
   },
   {
     timestamps: true,

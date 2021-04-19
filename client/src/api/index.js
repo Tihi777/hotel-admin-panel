@@ -2,6 +2,13 @@ import axios from 'axios';
 
 const api = axios.create({ baseURL: 'http://localhost:5000/api' });
 
+export const login = credits => api.post('/login', credits);
+
+export const fetchEmployee = () => api.get('/employees');
+export const createEmployee = employee => api.post('/employees', employee);
+export const updateEmployee = (id, updatedEmployee) => api.patch(`/employees/${id}`, updatedEmployee);
+export const deleteEmployee = id => api.delete(`/employees/${id}`);
+
 export const fetchEmployeePositions = () => api.get('/employee/positions');
 export const createEmployeePosition = employeePosition => api.post('/employee/positions', employeePosition);
 export const updateEmployeePosition = (id, updatedEmployeePosition) =>

@@ -1,11 +1,13 @@
-import { USER_SIGNIN, USER_SIGNUP, USER_LOGOUT } from '../constants/userConstants';
+import { USER_SIGNIN, USER_SIGNIN_FAILED, USER_SIGNOUT } from '../constants/userConstants';
 
 const userReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case USER_SIGNIN:
-    case USER_SIGNUP:
-    case USER_LOGOUT:
-      return state;
+      return payload;
+    case USER_SIGNOUT:
+      return {};
+    case USER_SIGNIN_FAILED:
+      return { error: true };
     default:
       return state;
   }

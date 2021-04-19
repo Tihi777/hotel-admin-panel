@@ -2,6 +2,7 @@ import React from 'react';
 
 // TODO: Переименовать компонент
 const Booking = React.lazy(() => import('./views/custom/Booking/Booking'));
+const Employee = React.lazy(() => import('./views/custom/Employee/Employee'));
 const Employees = React.lazy(() => import('./views/custom/Employees/Employees'));
 const EmployeePositions = React.lazy(() => import('./views/custom/EmployeePositions/EmployeePositions'));
 const Hotels = React.lazy(() => import('./views/custom/Hotels/Hotels'));
@@ -54,9 +55,10 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/booking', name: 'Бронирования', component: Booking },
   // TODO: исправить компонент на сотдрудники
-  { path: '/employee', name: 'Персонал', component: EmployeePositions, exact: true },
+  { path: '/employee', name: 'Персонал', component: Employees, exact: true },
   { path: '/employee/list', name: 'Сотрудники', component: Employees },
   { path: '/employee/positions', name: 'Должности', component: EmployeePositions },
+  { path: '/employee/:id', name: 'Информация о сотруднике', component: Employee },
 
   { path: '/complex', name: 'Комплекс', component: Hotels, exact: true },
   { path: '/complex/hotels', name: 'Гостиницы', component: Hotels },

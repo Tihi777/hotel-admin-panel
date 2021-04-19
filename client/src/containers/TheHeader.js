@@ -22,7 +22,7 @@ import { useHistory } from 'react-router-dom';
 const TheHeader = () => {
   const dispatch = useDispatch();
   const sidebarShow = useSelector(state => state.sidebarShow);
-  const { userName } = useSelector(state => state.user);
+  const user = useSelector(state => state.user);
   const history = useHistory();
 
   const toggleSidebar = () => {
@@ -35,11 +35,11 @@ const TheHeader = () => {
     dispatch({ type: 'set', sidebarShow: !Boolean(sidebarShow) });
   };
 
-  // useEffect(() => {
-  //   if (!userName) {
-  //     history.push('/login');
-  //   }
-  // }, [userName]);
+  useEffect(() => {
+    if (!user._id) {
+      history.push('/login');
+    }
+  }, [user]);
 
   return (
     <CHeader withSubheader>

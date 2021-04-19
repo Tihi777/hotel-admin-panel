@@ -1,9 +1,16 @@
 import express from "express";
-import { authEmployee } from "../controllers/employeeController.js";
+import {
+  createEmployee,
+  deleteEmployee,
+  getEmployees,
+  updateEmployee,
+} from "../controllers/employeeController.js";
 
 const router = express.Router();
 
-router.post("/login", authEmployee);
-router.post("/signup", () => {});
+router.get("/", getEmployees);
+router.post("/", createEmployee);
+router.patch("/:id", updateEmployee);
+router.delete("/:id", deleteEmployee);
 
 export default router;
