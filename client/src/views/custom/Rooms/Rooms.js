@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { CCard, CCardBody, CCardFooter, CCardHeader, CCol, CFade, CLink, CRow } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
-import './Rooms.scss';
+
 import RoomEditForm from './RoomEditForm';
 import { deleteRoom, getRooms, setActiveRoom } from '../../../actions/roomActions';
+
+import './Rooms.scss';
 
 const Rooms = () => {
   const rooms = useSelector(state => state.rooms.list);

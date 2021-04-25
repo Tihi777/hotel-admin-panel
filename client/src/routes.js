@@ -9,7 +9,7 @@ const Hotels = React.lazy(() => import('./views/custom/Hotels/Hotels'));
 const RoomTypes = React.lazy(() => import('./views/custom/RoomTypes/RoomTypes'));
 const Rooms = React.lazy(() => import('./views/custom/Rooms/Rooms'));
 const Guests = React.lazy(() => import('./views/custom/Guests/Guests'));
-// const Services = React.lazy(() => import('./views/custom/Services/Services'));
+const Services = React.lazy(() => import('./views/custom/Services/Services'));
 
 // TODO: Удалить лишние коспоненты
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
@@ -55,6 +55,7 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/booking', name: 'Бронирования', component: Booking },
   { path: '/guests', name: 'Посетители', component: Guests },
+  { path: '/services', name: 'Услуги', component: Services },
 
   // TODO: исправить компонент на сотдрудники
   { path: '/employee', name: 'Персонал', component: Employees, exact: true },
