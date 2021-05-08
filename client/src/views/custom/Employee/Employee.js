@@ -7,8 +7,7 @@ import 'moment/locale/ru';
 import Moment from 'react-moment';
 import { deleteEmployee, getEmployees } from '../../../actions/employeeActions';
 import { openModal } from '../../../actions/modalActions';
-import { EDIT_EMPLOYEES_MODAL, EDIT_ROOM_TYPE_MODAL } from '../../../constants/modalConstants';
-import { getEmployeePositions } from '../../../actions/employeePositionActions';
+import { EDIT_EMPLOYEES_MODAL } from '../../../constants/modalConstants';
 
 const Employee = ({ match }) => {
   const dispatch = useDispatch();
@@ -56,19 +55,13 @@ const Employee = ({ match }) => {
                 <tr>
                   <td>Должность:</td>
                   <td>
-                    <strong>{employee.position.name}</strong>
+                    <strong>{employee.position?.name}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td>Email:</td>
                   <td>
                     <strong>{employee.email}</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Пароль:</td>
-                  <td>
-                    <strong>{employee.password}</strong>
                   </td>
                 </tr>
                 <tr>

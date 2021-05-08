@@ -25,7 +25,8 @@
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.19",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react-datepicker": "^3.8.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

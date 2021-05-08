@@ -11,7 +11,6 @@ const TheLayout = () => {
         <div className="c-body">
           <TheContent />
         </div>
-        <TheFooter />
         <Modal />
       </div>
     </div>

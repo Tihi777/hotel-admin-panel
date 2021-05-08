@@ -39,3 +39,8 @@ export const fetchServices = () => api.get('/services');
 export const createService = service => api.post('/services', service);
 export const updateService = (id, updatedService) => api.patch(`/services/${id}`, updatedService);
 export const deleteService = id => api.delete(`/services/${id}`);
+
+export const fetchBookings = () => api.get('/booking');
+export const createBooking = booking => api.post('/booking', booking);
+export const updateBooking = (id, updatedBooking) => api.patch(`/booking/${id}`, updatedBooking);
+export const deleteBooking = id => api.delete(`/booking/${id}`);

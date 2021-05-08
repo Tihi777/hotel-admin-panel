@@ -91,7 +91,7 @@ const Employees = () => {
                     </Moment>
                   </td>
                 ),
-                position: item => <td>{item.position.name}</td>,
+                position: item => <td>{item.position?.name}</td>,
               }}
             />
             <CPagination

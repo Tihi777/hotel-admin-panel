@@ -184,7 +184,13 @@ const BasicForms = () => {
                     <CLabel htmlFor="email-input">Email Input</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="email" id="email-input" name="email-input" placeholder="Enter Email" autoComplete="email" />
+                    <CInput
+                      type="email"
+                      id="email-input"
+                      name="email-input"
+                      placeholder="Enter Email"
+                      autoComplete="email"
+                    />
                     <CFormText className="help-block">Please enter your email</CFormText>
                   </CCol>
                 </CFormGroup>
@@ -193,7 +199,13 @@ const BasicForms = () => {
                     <CLabel htmlFor="password-input">Password</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="password" id="password-input" name="password-input" placeholder="Password" autoComplete="new-password" />
+                    <CInput
+                      type="password"
+                      id="password-input"
+                      name="password-input"
+                      placeholder="Password"
+                      autoComplete="new-password"
+                    />
                     <CFormText className="help-block">Please enter a complex password</CFormText>
                   </CCol>
                 </CFormGroup>
@@ -218,12 +230,7 @@ const BasicForms = () => {
                     <CLabel htmlFor="textarea-input">Textarea</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CTextarea
-                      name="textarea-input"
-                      id="textarea-input"
-                      rows="9"
-                      placeholder="Content..."
-                    />
+                    <CTextarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
@@ -272,13 +279,7 @@ const BasicForms = () => {
                     <CLabel htmlFor="disabledSelect">Disabled Select</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CSelect
-                      custom
-                      name="disabledSelect"
-                      id="disabledSelect"
-                      disabled
-                      autoComplete="name"
-                    >
+                    <CSelect custom name="disabledSelect" id="disabledSelect" disabled autoComplete="name">
                       <option value="0">Please select</option>
                       <option value="1">Option #1</option>
                       <option value="2">Option #2</option>
@@ -291,43 +292,12 @@ const BasicForms = () => {
                     Switch checkboxes
                   </CCol>
                   <CCol sm="9">
-                    <CSwitch
-                      className="mr-1"
-                      color="primary"
-                      defaultChecked
-                    />
-                    <CSwitch
-                      className="mr-1"
-                      color="success"
-                      defaultChecked
-                      variant="outline"
-                    />
-                    <CSwitch
-                      className="mr-1"
-                      color="warning"
-                      defaultChecked
-                      variant="opposite"
-                    />
-                    <CSwitch
-                      className="mr-1"
-                      color="danger"
-                      defaultChecked
-                      shape="pill"
-                    />
-                    <CSwitch
-                      className="mr-1"
-                      color="info"
-                      defaultChecked
-                      shape="pill"
-                      variant="outline"
-                    />
-                    <CSwitch
-                      className="mr-1"
-                      color="dark"
-                      defaultChecked
-                      shape="pill"
-                      variant="opposite"
-                    />
+                    <CSwitch className="mr-1" color="primary" defaultChecked />
+                    <CSwitch className="mr-1" color="success" defaultChecked variant="outline" />
+                    <CSwitch className="mr-1" color="warning" defaultChecked variant="opposite" />
+                    <CSwitch className="mr-1" color="danger" defaultChecked shape="pill" />
+                    <CSwitch className="mr-1" color="info" defaultChecked shape="pill" variant="outline" />
+                    <CSwitch className="mr-1" color="dark" defaultChecked shape="pill" variant="opposite" />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
@@ -337,15 +307,21 @@ const BasicForms = () => {
                   <CCol md="9">
                     <CFormGroup variant="checkbox">
                       <CInputRadio className="form-check-input" id="radio1" name="radios" value="option1" />
-                      <CLabel variant="checkbox" htmlFor="radio1">Option 1</CLabel>
+                      <CLabel variant="checkbox" htmlFor="radio1">
+                        Option 1
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="checkbox">
                       <CInputRadio className="form-check-input" id="radio2" name="radios" value="option2" />
-                      <CLabel variant="checkbox" htmlFor="radio2">Option 2</CLabel>
+                      <CLabel variant="checkbox" htmlFor="radio2">
+                        Option 2
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="checkbox">
                       <CInputRadio className="form-check-input" id="radio3" name="radios" value="option3" />
-                      <CLabel variant="checkbox" htmlFor="radio3">Option 3</CLabel>
+                      <CLabel variant="checkbox" htmlFor="radio3">
+                        Option 3
+                      </CLabel>
                     </CFormGroup>
                   </CCol>
                 </CFormGroup>
@@ -356,36 +332,46 @@ const BasicForms = () => {
                   <CCol md="9">
                     <CFormGroup variant="custom-radio" inline>
                       <CInputRadio custom id="inline-radio1" name="inline-radios" value="option1" />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio1">One</CLabel>
+                      <CLabel variant="custom-checkbox" htmlFor="inline-radio1">
+                        One
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="custom-radio" inline>
                       <CInputRadio custom id="inline-radio2" name="inline-radios" value="option2" />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio2">Two</CLabel>
+                      <CLabel variant="custom-checkbox" htmlFor="inline-radio2">
+                        Two
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="custom-radio" inline>
                       <CInputRadio custom id="inline-radio3" name="inline-radios" value="option3" />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-radio3">Three</CLabel>
+                      <CLabel variant="custom-checkbox" htmlFor="inline-radio3">
+                        Three
+                      </CLabel>
                     </CFormGroup>
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CCol md="3"><CLabel>Checkboxes</CLabel></CCol>
+                  <CCol md="3">
+                    <CLabel>Checkboxes</CLabel>
+                  </CCol>
                   <CCol md="9">
                     <CFormGroup variant="checkbox" className="checkbox">
-                      <CInputCheckbox
-                        id="checkbox1"
-                        name="checkbox1"
-                        value="option1"
-                      />
-                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox1">Option 1</CLabel>
+                      <CInputCheckbox id="checkbox1" name="checkbox1" value="option1" />
+                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox1">
+                        Option 1
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="checkbox" className="checkbox">
                       <CInputCheckbox id="checkbox2" name="checkbox2" value="option2" />
-                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox2">Option 2</CLabel>
+                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox2">
+                        Option 2
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="checkbox" className="checkbox">
                       <CInputCheckbox id="checkbox3" name="checkbox3" value="option3" />
-                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox3">Option 3</CLabel>
+                      <CLabel variant="checkbox" className="form-check-label" htmlFor="checkbox3">
+                        Option 3
+                      </CLabel>
                     </CFormGroup>
                   </CCol>
                 </CFormGroup>
@@ -395,26 +381,29 @@ const BasicForms = () => {
                   </CCol>
                   <CCol md="9">
                     <CFormGroup variant="custom-checkbox" inline>
-                      <CInputCheckbox
-                        custom
-                        id="inline-checkbox1"
-                        name="inline-checkbox1"
-                        value="option1"
-                      />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox1">One</CLabel>
+                      <CInputCheckbox custom id="inline-checkbox1" name="inline-checkbox1" value="option1" />
+                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox1">
+                        One
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="custom-checkbox" inline>
                       <CInputCheckbox custom id="inline-checkbox2" name="inline-checkbox2" value="option2" />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox2">Two</CLabel>
+                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox2">
+                        Two
+                      </CLabel>
                     </CFormGroup>
                     <CFormGroup variant="custom-checkbox" inline>
                       <CInputCheckbox custom id="inline-checkbox3" name="inline-checkbox3" value="option3" />
-                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox3">Three</CLabel>
+                      <CLabel variant="custom-checkbox" htmlFor="inline-checkbox3">
+                        Three
+                      </CLabel>
                     </CFormGroup>
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel col md="3" htmlFor="file-input">File input</CLabel>
+                  <CLabel col md="3" htmlFor="file-input">
+                    File input
+                  </CLabel>
                   <CCol xs="12" md="9">
                     <CInputFile id="file-input" name="file-input" />
                   </CCol>
@@ -424,19 +413,16 @@ const BasicForms = () => {
                     <CLabel>Multiple File input</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInputFile
-                      id="file-multiple-input"
-                      name="file-multiple-input"
-                      multiple
-                      custom
-                    />
+                    <CInputFile id="file-multiple-input" name="file-multiple-input" multiple custom />
                     <CLabel htmlFor="file-multiple-input" variant="custom-file">
                       Choose Files...
                     </CLabel>
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel col md={3}>Custom file input</CLabel>
+                  <CLabel col md={3}>
+                    Custom file input
+                  </CLabel>
                   <CCol xs="12" md="9">
                     <CInputFile custom id="custom-file-input" />
                     <CLabel htmlFor="custom-file-input" variant="custom-file">
@@ -447,8 +433,12 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
           <CCard>
@@ -459,18 +449,26 @@ const BasicForms = () => {
             <CCardBody>
               <CForm action="" method="post" inline>
                 <CFormGroup className="pr-1">
-                  <CLabel htmlFor="exampleInputName2" className="pr-1">Name</CLabel>
+                  <CLabel htmlFor="exampleInputName2" className="pr-1">
+                    Name
+                  </CLabel>
                   <CInput id="exampleInputName2" placeholder="Jane Doe" required />
                 </CFormGroup>
                 <CFormGroup className="pr-1">
-                  <CLabel htmlFor="exampleInputEmail2" className="pr-1">Email</CLabel>
+                  <CLabel htmlFor="exampleInputEmail2" className="pr-1">
+                    Email
+                  </CLabel>
                   <CInput type="email" id="exampleInputEmail2" placeholder="jane.doe@example.com" required />
                 </CFormGroup>
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
@@ -487,7 +485,13 @@ const BasicForms = () => {
                     <CLabel htmlFor="hf-email">Email</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="email" id="hf-email" name="hf-email" placeholder="Enter Email..." autoComplete="email" />
+                    <CInput
+                      type="email"
+                      id="hf-email"
+                      name="hf-email"
+                      placeholder="Enter Email..."
+                      autoComplete="email"
+                    />
                     <CFormText className="help-block">Please enter your email</CFormText>
                   </CCol>
                 </CFormGroup>
@@ -496,14 +500,25 @@ const BasicForms = () => {
                     <CLabel htmlFor="hf-password">Password</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CInput type="password" id="hf-password" name="hf-password" placeholder="Enter Password..." autoComplete="current-password" />
+                    <CInput
+                      type="password"
+                      id="hf-password"
+                      name="hf-password"
+                      placeholder="Enter Password..."
+                      autoComplete="current-password"
+                    />
                     <CFormText className="help-block">Please enter your password</CFormText>
                   </CCol>
                 </CFormGroup>
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-scrubber" /> Submit</CButton> <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>{' '}
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
           <CCard>
@@ -520,13 +535,24 @@ const BasicForms = () => {
                 </CFormGroup>
                 <CFormGroup>
                   <CLabel htmlFor="nf-password">Password</CLabel>
-                  <CInput type="password" id="nf-password" name="nf-password" placeholder="Enter Password.." autoComplete="current-password" />
+                  <CInput
+                    type="password"
+                    id="nf-password"
+                    name="nf-password"
+                    placeholder="Enter Password.."
+                    autoComplete="current-password"
+                  />
                   <CFormText className="help-block">Please enter your password</CFormText>
                 </CFormGroup>
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-scrubber" /> Submit</CButton> <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>{' '}
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
           <CCard>
@@ -589,7 +615,12 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-user" /> Login</CButton> <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-user" /> Login
+              </CButton>{' '}
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
           <CCard>
@@ -600,28 +631,52 @@ const BasicForms = () => {
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
                 <CFormGroup row>
-                  <CLabel sm="5" col="sm" htmlFor="input-small">Small Input</CLabel>
+                  <CLabel sm="5" col="sm" htmlFor="input-small">
+                    Small Input
+                  </CLabel>
                   <CCol sm="6">
-                    <CInput size="sm" type="text" id="input-small" name="input-small" className="input-sm" placeholder=".form-control-sm" />
+                    <CInput
+                      size="sm"
+                      type="text"
+                      id="input-small"
+                      name="input-small"
+                      className="input-sm"
+                      placeholder=".form-control-sm"
+                    />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel sm="5" col htmlFor="input-normal">Normal Input</CLabel>
+                  <CLabel sm="5" col htmlFor="input-normal">
+                    Normal Input
+                  </CLabel>
                   <CCol sm="6">
                     <CInput id="input-normal" name="input-normal" placeholder="Normal" />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel sm="5" col="lg" htmlFor="input-large">Large Input</CLabel>
+                  <CLabel sm="5" col="lg" htmlFor="input-large">
+                    Large Input
+                  </CLabel>
                   <CCol sm="6">
-                    <CInput size="lg" type="text" id="input-large" name="input-large" className="input-lg" placeholder=".form-control-lg" />
+                    <CInput
+                      size="lg"
+                      type="text"
+                      id="input-large"
+                      name="input-large"
+                      className="input-lg"
+                      placeholder=".form-control-lg"
+                    />
                   </CCol>
                 </CFormGroup>
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
@@ -649,9 +704,7 @@ const BasicForms = () => {
         </CCol>
         <CCol xs="12" sm="6">
           <CCard>
-            <CCardHeader>
-              Validation feedback Form
-            </CCardHeader>
+            <CCardHeader>Validation feedback Form</CCardHeader>
             <CCardBody>
               <CForm className="was-validated">
                 <CFormGroup>
@@ -662,9 +715,7 @@ const BasicForms = () => {
                 <CFormGroup>
                   <CLabel htmlFor="inputWarning2i">Required input</CLabel>
                   <CInput className="form-control-warning" id="inputWarning2i" required />
-                  <CInvalidFeedback className="help-block">
-                    Please provide a valid information
-                  </CInvalidFeedback>
+                  <CInvalidFeedback className="help-block">Please provide a valid information</CInvalidFeedback>
                   <CValidFeedback className="help-block">Input provided</CValidFeedback>
                 </CFormGroup>
               </CForm>
@@ -675,9 +726,7 @@ const BasicForms = () => {
       <CRow>
         <CCol xs="12" md="4">
           <CCard>
-            <CCardHeader>
-              Icon/Text Groups
-            </CCardHeader>
+            <CCardHeader>Icon/Text Groups</CCardHeader>
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
                 <CFormGroup row>
@@ -722,23 +771,27 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="success"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="success">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
         <CCol xs="12" md="4">
           <CCard>
-            <CCardHeader>
-              Button Groups
-            </CCardHeader>
+            <CCardHeader>Button Groups</CCardHeader>
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
                 <CFormGroup row>
                   <CCol md="12">
                     <CInputGroup>
                       <CInputGroupPrepend>
-                        <CButton type="button" color="primary"><CIcon name="cil-magnifying-glass" /> Search</CButton>
+                        <CButton type="button" color="primary">
+                          <CIcon name="cil-magnifying-glass" /> Search
+                        </CButton>
                       </CInputGroupPrepend>
                       <CInput id="input1-group2" name="input1-group2" placeholder="Username" />
                     </CInputGroup>
@@ -749,7 +802,9 @@ const BasicForms = () => {
                     <CInputGroup>
                       <CInput type="email" id="input2-group2" name="input2-group2" placeholder="Email" />
                       <CInputGroupAppend>
-                        <CButton type="button" color="primary">Submit</CButton>
+                        <CButton type="button" color="primary">
+                          Submit
+                        </CButton>
                       </CInputGroupAppend>
                     </CInputGroup>
                   </CCol>
@@ -758,11 +813,15 @@ const BasicForms = () => {
                   <CCol md="12">
                     <CInputGroup>
                       <CInputGroupPrepend>
-                        <CButton type="button" color="primary"><CIcon name="cib-facebook" /></CButton>
+                        <CButton type="button" color="primary">
+                          <CIcon name="cib-facebook" />
+                        </CButton>
                       </CInputGroupPrepend>
                       <CInput id="input3-group2" name="input3-group2" placeholder="Search" />
                       <CInputGroupAppend>
-                        <CButton type="button" color="primary"><CIcon name="cib-twitter" /></CButton>
+                        <CButton type="button" color="primary">
+                          <CIcon name="cib-twitter" />
+                        </CButton>
                       </CInputGroupAppend>
                     </CInputGroup>
                   </CCol>
@@ -770,16 +829,18 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="success"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="success">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
         <CCol xs="12" md="4">
           <CCard>
-            <CCardHeader>
-              Dropdowns Groups
-            </CCardHeader>
+            <CCardHeader>Dropdowns Groups</CCardHeader>
             <CCardBody>
               <CForm className="form-horizontal">
                 <CFormGroup row>
@@ -806,9 +867,7 @@ const BasicForms = () => {
                     <CInputGroup>
                       <CInput type="email" id="input2-group3" name="input2-group3" placeholder="Email" />
                       <CDropdown className="input-group-append">
-                        <CDropdownToggle color="primary">
-                          Dropdown
-                        </CDropdownToggle>
+                        <CDropdownToggle color="primary">Dropdown</CDropdownToggle>
                         <CDropdownMenu>
                           <CDropdownItem>Action</CDropdownItem>
                           <CDropdownItem>Another Action</CDropdownItem>
@@ -852,8 +911,12 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="success"><CIcon name="cil-scrubber" /> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban" /> Reset</CButton>
+              <CButton type="submit" size="sm" color="success">
+                <CIcon name="cil-scrubber" /> Submit
+              </CButton>
+              <CButton type="reset" size="sm" color="danger">
+                <CIcon name="cil-ban" /> Reset
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
@@ -863,7 +926,10 @@ const BasicForms = () => {
           <CCard>
             <CCardHeader>
               Use the grid for big devices!
-              <small> <code>.col-lg-*</code> <code>.col-md-*</code> <code>.col-sm-*</code></small>
+              <small>
+                {' '}
+                <code>.col-lg-*</code> <code>.col-md-*</code> <code>.col-sm-*</code>
+              </small>
             </CCardHeader>
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
@@ -910,11 +976,21 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary">Action</CButton>
-              <CButton size="sm" color="danger">Action</CButton>
-              <CButton size="sm" color="warning">Action</CButton>
-              <CButton size="sm" color="info">Action</CButton>
-              <CButton size="sm" color="success">Action</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                Action
+              </CButton>
+              <CButton size="sm" color="danger">
+                Action
+              </CButton>
+              <CButton size="sm" color="warning">
+                Action
+              </CButton>
+              <CButton size="sm" color="info">
+                Action
+              </CButton>
+              <CButton size="sm" color="success">
+                Action
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
@@ -922,7 +998,10 @@ const BasicForms = () => {
           <CCard>
             <CCardHeader>
               Input Grid for small devices!
-              <small> <code>.col-*</code></small>
+              <small>
+                {' '}
+                <code>.col-*</code>
+              </small>
             </CCardHeader>
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
@@ -969,11 +1048,21 @@ const BasicForms = () => {
               </CForm>
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary">Action</CButton>
-              <CButton size="sm" color="danger">Action</CButton>
-              <CButton size="sm" color="warning">Action</CButton>
-              <CButton size="sm" color="info">Action</CButton>
-              <CButton size="sm" color="success">Action</CButton>
+              <CButton type="submit" size="sm" color="primary">
+                Action
+              </CButton>
+              <CButton size="sm" color="danger">
+                Action
+              </CButton>
+              <CButton size="sm" color="warning">
+                Action
+              </CButton>
+              <CButton size="sm" color="info">
+                Action
+              </CButton>
+              <CButton size="sm" color="success">
+                Action
+              </CButton>
             </CCardFooter>
           </CCard>
         </CCol>
@@ -981,9 +1070,7 @@ const BasicForms = () => {
       <CRow>
         <CCol xs="12" sm="4">
           <CCard>
-            <CCardHeader>
-              Example Form
-            </CCardHeader>
+            <CCardHeader>Example Form</CCardHeader>
             <CCardBody>
               <CForm action="" method="post">
                 <CFormGroup>
@@ -993,7 +1080,9 @@ const BasicForms = () => {
                     </CInputGroupPrepend>
                     <CInput type="email" id="username3" name="username3" autoComplete="name" />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-user" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
@@ -1004,7 +1093,9 @@ const BasicForms = () => {
                     </CInputGroupPrepend>
                     <CInput type="email" id="email3" name="email3" autoComplete="username" />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-envelope-closed" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
@@ -1015,12 +1106,16 @@ const BasicForms = () => {
                     </CInputGroupPrepend>
                     <CInput type="password" id="password3" name="password3" autoComplete="current-password" />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-asterisk" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup className="form-actions">
-                  <CButton type="submit" size="sm" color="primary">Submit</CButton>
+                  <CButton type="submit" size="sm" color="primary">
+                    Submit
+                  </CButton>
                 </CFormGroup>
               </CForm>
             </CCardBody>
@@ -1028,16 +1123,16 @@ const BasicForms = () => {
         </CCol>
         <CCol xs="12" sm="4">
           <CCard>
-            <CCardHeader>
-              Example Form
-            </CCardHeader>
+            <CCardHeader>Example Form</CCardHeader>
             <CCardBody>
               <CForm action="" method="post">
                 <CFormGroup>
                   <CInputGroup>
                     <CInput id="username2" name="username2" placeholder="Username" autoComplete="name" />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-user" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
@@ -1045,20 +1140,32 @@ const BasicForms = () => {
                   <CInputGroup>
                     <CInput type="email" id="email2" name="email2" placeholder="Email" autoComplete="username" />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-envelope-closed" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup>
                   <CInputGroup>
-                    <CInput type="password" id="password2" name="password2" placeholder="Password" autoComplete="current-password" />
+                    <CInput
+                      type="password"
+                      id="password2"
+                      name="password2"
+                      placeholder="Password"
+                      autoComplete="current-password"
+                    />
                     <CInputGroupAppend>
-                      <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-asterisk" />
+                      </CInputGroupText>
                     </CInputGroupAppend>
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup className="form-actions">
-                  <CButton type="submit" size="sm" color="secondary">Submit</CButton>
+                  <CButton type="submit" size="sm" color="secondary">
+                    Submit
+                  </CButton>
                 </CFormGroup>
               </CForm>
             </CCardBody>
@@ -1066,15 +1173,15 @@ const BasicForms = () => {
         </CCol>
         <CCol xs="12" sm="4">
           <CCard>
-            <CCardHeader>
-              Example Form
-            </CCardHeader>
+            <CCardHeader>Example Form</CCardHeader>
             <CCardBody>
               <CForm action="" method="post">
                 <CFormGroup>
                   <CInputGroup>
                     <CInputGroupPrepend>
-                      <CInputGroupText><CIcon name="cil-user" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-user" />
+                      </CInputGroupText>
                     </CInputGroupPrepend>
                     <CInput id="username1" name="username1" placeholder="Username" autoComplete="name" />
                   </CInputGroup>
@@ -1082,7 +1189,9 @@ const BasicForms = () => {
                 <CFormGroup>
                   <CInputGroup>
                     <CInputGroupPrepend>
-                      <CInputGroupText><CIcon name="cil-envelope-closed" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-envelope-closed" />
+                      </CInputGroupText>
                     </CInputGroupPrepend>
                     <CInput type="email" id="email1" name="email1" placeholder="Email" autoComplete="username" />
                   </CInputGroup>
@@ -1090,13 +1199,23 @@ const BasicForms = () => {
                 <CFormGroup>
                   <CInputGroup>
                     <CInputGroupPrepend>
-                      <CInputGroupText><CIcon name="cil-asterisk" /></CInputGroupText>
+                      <CInputGroupText>
+                        <CIcon name="cil-asterisk" />
+                      </CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" id="password1" name="password1" placeholder="Password" autoComplete="current-password" />
+                    <CInput
+                      type="password"
+                      id="password1"
+                      name="password1"
+                      placeholder="Password"
+                      autoComplete="current-password"
+                    />
                   </CInputGroup>
                 </CFormGroup>
                 <CFormGroup className="form-actions">
-                  <CButton type="submit" size="sm" color="success">Submit</CButton>
+                  <CButton type="submit" size="sm" color="success">
+                    Submit
+                  </CButton>
                 </CFormGroup>
               </CForm>
             </CCardBody>
@@ -1120,11 +1239,7 @@ const BasicForms = () => {
                   >
                     <CIcon name={collapsed ? 'cil-arrow-top' : 'cil-arrow-bottom'} />
                   </CButton>
-                  <CButton
-                    color="link"
-                    className="card-header-action btn-close"
-                    onClick={() => setShowElements(false)}
-                  >
+                  <CButton color="link" className="card-header-action btn-close" onClick={() => setShowElements(false)}>
                     <CIcon name="cil-x" />
                   </CButton>
                 </div>
@@ -1194,7 +1309,9 @@ const BasicForms = () => {
                       </div>
                     </CFormGroup>
                     <div className="form-actions">
-                      <CButton type="submit" color="primary">Save changes</CButton>
+                      <CButton type="submit" color="primary">
+                        Save changes
+                      </CButton>
                       <CButton color="secondary">Cancel</CButton>
                     </div>
                   </CForm>

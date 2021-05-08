@@ -30,7 +30,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user._id) {
-      history.replace('/dashboard');
+      history.replace('/booking');
     }
   }, [user]);
 

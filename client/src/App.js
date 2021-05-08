@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './scss/style.scss';
 import { getHotels } from './actions/hotelActions';
+import { getGuests } from './actions/guestActions';
 
 const loading = (
   <div className="pt-3 text-center">
@@ -21,6 +22,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getHotels());
+    dispatch(getGuests());
   }, []);
 
   return (

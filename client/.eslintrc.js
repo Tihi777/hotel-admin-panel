@@ -27,12 +27,13 @@ module.exports = {
     'no-unused-vars': 0,
     'no-shadow': 0,
     'comma-dangle': 0,
+    'operator-linebreak': 0,
     'function-paren-newline': 0,
     'no-confusing-arrow': 0,
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
-    'max-len': [1, 120],
+    'max-len': [0, 120],
     'no-multiple-empty-lines': [
       'error',
       {

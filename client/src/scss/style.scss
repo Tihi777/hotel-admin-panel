@@ -9,3 +9,37 @@
 
 // If you want to add something do it here
 @import "custom";
+
+.react-datepicker__header {
+  background: #ced2d8 !important;
+}
+
+.react-datepicker__day--selected {
+  background: #321fdb !important;
+}
+
+.react-datepicker__day--in-range {
+  background: #321fdb !important;
+  opacity: 0.65;
+}
+
+.react-datepicker__day--in-selecting-range {
+  background: #321fdb !important;
+  opacity: 0.65;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-color: #eeeeee !important;
+}
+
+.react-datepicker__navigation--next {
+  border-left-color: #eeeeee !important;
+}
+
+.react-datepicker__navigation--previous:hover {
+  border-right-color: #1f1f21 !important;
+}
+
+.react-datepicker__navigation--next:hover {
+  border-left-color: #1f1f21 !important;
+}
