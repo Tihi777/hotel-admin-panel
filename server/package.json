@@ -10,9 +10,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js --watch ../server",
-    "start-build": "cross-env NODE_ENV=production node index.js",
-    "start-dev": "cross-env NODE_ENV=development nodemon index.js"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "nodemon index.js --watch ../server"
   },
   "license": "ISC",
   "dependencies": {
